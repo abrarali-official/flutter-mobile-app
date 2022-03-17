@@ -9,15 +9,31 @@ class Homepage extends StatelessWidget {
     // ignore: unused_local_variable
     int currentIndex = 0;
     return Scaffold(
+      // ignore: prefer_const_constructors
+      floatingActionButton: const CircleAvatar(radius: 30),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      drawer: const Drawer(
+        backgroundColor: Colors.red,
+      ),
       backgroundColor: Colors.grey.shade300,
       appBar: AppBar(
-          title: const Center(child: Text('Cafe')),
-          titleTextStyle: const TextStyle(
-            color: Colors.red,
-            fontWeight: FontWeight.bold,
-            fontSize: 23,
-          ),
-          backgroundColor: Colors.white),
+        centerTitle: true,
+        title: Image.asset(
+          'assets/Layer 1-Recovered.png',
+          height: 80,
+          width: 80,
+        ),
+        backgroundColor: Colors.white,
+      ),
+      // appBar: AppBar(
+
+      //     // ignore: prefer_const_constructors
+      //     flexibleSpace: Image(
+      //       image: const AssetImage('assets/Layer 1-Recovered.png'),
+      //       height: 100,
+      //       width: 100,
+      //     ),
+      // backgroundColor: Colors.white),
       bottomNavigationBar: BottomNavigationBar(
         onTap: (index) => currentIndex = index,
         // currentIndex: 3,
